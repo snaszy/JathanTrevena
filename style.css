@@ -1,0 +1,185 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.business-card {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 220px;
+}
+.left {
+    display: flex;
+    width: 40%;
+    height: 100%;
+}
+#background {
+    position: absolute;
+    top: 0px;
+    left: 148px;
+    height: 0; 
+    border-left: 0px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 80px solid #B78E79;
+}
+#photo {
+    width: 148px;
+    height: 220px;
+    animation: image;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes image {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#line1 {
+    position: absolute;
+    top: 0px;
+    left: 145px;
+    width: 6px;
+    height: 40px;
+    background-color: white;
+    transform: skew(-27deg, 0deg);
+    animation-name: line1;
+    animation-duration: 1s;
+}
+@keyframes line1 {
+    from {left: 100px;}
+}
+#line2 {
+    position: absolute;
+    top: 0px;
+    left: 138px;
+    width: 20px;
+    height: 120px;
+    background-color: #BF213C;
+    transform: skew(-27deg, 0deg);
+    animation-name: line1;
+    animation-duration: 1s;
+}
+#line3 {
+    position: absolute;
+    top: 0px;
+    left: 117px;
+    width: 25px;
+    height: 220px;
+    background-color: #1E3564;
+    transform: skew(-27deg, 0deg);
+    animation-name: line1;
+    animation-duration: 1s;
+}
+#line4 {
+    position: absolute;
+    top: 70px;
+    left: 180px;
+    width: 20px;
+    height: 150px;
+    background-color: #BF213C;
+    transform: skew(27deg, 0deg);
+    animation-name: line1;
+    animation-duration: 1s;
+}
+#line5 {
+    position: absolute;
+    top: 120px;
+    left: 180px;
+    width: 6px;
+    height: 100px;
+    background-color: #1E3564;
+    transform: skew(27deg, 0deg);
+    animation-name: line1;
+    animation-duration: 1s;
+}
+#triangle {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 0; 
+    height: 0; 
+    border-left: 72px solid transparent;
+    border-right: 72px solid transparent;
+    border-bottom: 140px solid white;
+}
+#coldwell {
+    position: absolute;
+    top: 170px;
+    left: 100px;
+    width: 100px; 
+    height: 50px; 
+}
+#text {
+    font-family: 'Raleway', sans-serif;
+    color: #1E3564;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    left: 200px; 
+    line-height: 18px;
+    animation-name: line1;
+    animation-duration: 1s;
+}
+.icon {
+    margin: 0px;
+    padding: 0px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    animation-name: line1;
+    animation-duration: 1s;
+}
+.awards {
+    margin: 0px;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    animation-name: line1;
+    animation-duration: 1s;
+}
+.right {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 30%;
+    animation-name: right;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes right {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.logo-container {
+    justify-self: center;
+}
+#logo {
+    height: 100%;
+}
+.banner-container {
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    grid-template-rows: 100%;
+}
+.banner {
+    height: 100%;
+    justify-self: center;
+    align-self: end;
+}
+:any-link {
+    text-decoration: none;
+    color: #1E3564;
+}
+@media only screen and (max-width: 1100px) {
+    .business-card {
+        grid-template-columns: 100%;
+        grid-template-rows: 220px 220px;
+    }
+    .logo-container {
+        justify-self: start;
+    }
+    .banner-container {
+        max-width: 800px;
+        min-width: 660px;
+    }
+    .banner {
+        justify-self: start;
+    }
+}
